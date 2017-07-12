@@ -1,0 +1,70 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0px;
+	background: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+}
+
+#pageHeader {
+	padding: 10px 20px;
+}
+
+#bookingInfoCalendar {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#bookingInfoCalendar .tableHeader {
+	box-shadow: 0px 0px 2px 1px #aaa;
+}
+
+#bookingInfoCalendar .bookingCell, #bookingInfoCalendar .headingCell {
+	padding: 10px;
+}
+#bookingInfoCalendar .tableHeader .headingCell:first-child {
+	width: 10%;
+}
+#bookingInfoCalendar .bookingCell {
+	height: 40px;
+	border-right: 1px solid #ddd;
+}
+
+#bookingInfoCalendar .tableBody .row{
+	border-bottom: 1px dashed #ddd;
+}
+
+.bookingCell.booked {
+	background: #21b355;
+	color: #fff;
+	font-weight: 500;
+}
+
+.pageNav {
+	display: inline-block;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    vertical-align: middle;
+    font-size: 0;
+    cursor: pointer;
+}
+.pageNav.previous::after, .pageNav.next::after {
+	content: '';
+	position: absolute;
+	left: 8px;
+	top: 8px;
+	width: 5px;
+	height: 5px;
+	border: 1px solid #555;
+	border-width: 2px 2px 0 0;
+}
+.pageNav.previous::after{
+	transform: rotate(-135deg);
+}
+.pageNav.next::after{
+	transform: rotate(45deg);
+}
